@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Hub Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">💬</div>
+        <div class="brand__text">
+          <h1 class="brand__title">Company Hub Chat</h1>
+          <p class="brand__subtitle">Find internal links and resources fast</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="app__main">
+      <div id="messages" class="chat" aria-live="polite" aria-relevant="additions"></div>
+
+      <form id="chat-form" class="composer" autocomplete="off">
+        <input id="user-input" class="composer__input" type="text" name="q" placeholder="Ask for a link… e.g., PTO policy, VPN, benefits" aria-label="Message" />
+        <button class="composer__button" type="submit" aria-label="Send">Send</button>
+      </form>
+    </main>
+
+    <footer class="app__footer">
+      <button id="quick-help" class="chip" type="button">Show categories</button>
+    </footer>
+  </div>
+
+  <script src="links.js"></script>
+  <script src="faqs.js"></script>
+  <script src="app.js"></script>
+</body>
+<!--
+  Simple static chatbot for surfacing internal links.
+  Edit links in links.js. Customize behavior in app.js.
+-->
+</html>
+
+
